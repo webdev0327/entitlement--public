@@ -21,13 +21,15 @@ First, your application will require three libraries:
 Next, let's setup the TGAM-specific UI components which will react to authorization attempts (successes or failures):
 
 ```js
-import EntitlementCompositeController from '@barchart/tgam-common-ui-js/lib/web/components/entitlement/CompositeController';
-import EntitlementModalController from '@barchart/tgam-common-ui-js/lib/web/components/entitlement/Modal/ModalController';
-import EntitlementToastController from '@barchart/tgam-common-ui-js/lib/web/components/entitlement/Toast/ToastController';
+import CompositeController from '@barchart/tgam-common-ui-js/lib/web/components/entitlement/CompositeController';
+import ModalController from '@barchart/tgam-common-ui-js/lib/web/components/entitlement/Modal/ModalController';
+import ToastController from '@barchart/tgam-common-ui-js/lib/web/components/entitlement/Toast/ToastController';
 
-const entitlementsController = new EntitlementCompositeController([
-	new EntitlementModalController(this.$refs.mainApp),
-	new EntitlementToastController(this.$refs.mainApp)
+const containerElement = document.getElementById('my-container');
+
+const entitlementsController = new CompositeController([
+	new ModalController(containerElement),
+	new ToastController(containerElement)
 ]);
 ```
 
