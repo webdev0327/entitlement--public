@@ -52,7 +52,7 @@ const startup = (() => {
 		.then((gateway) => {
 			entitlementsGateway = gateway;
 
-			const operation = 'watchlist.views.builtin.funds.standard';
+			const operation = 'watchlist.exports.csv';
 			const data = null;
 
 			console.log(`Example: Requesting authorization for operation [ ${operation} ]`);
