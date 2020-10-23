@@ -22,8 +22,7 @@
     "SDK"
   ],
   "dependencies": {
-    "@barchart/common-js": "^3.17.2",
-    "uuid": "^3.4.0"
+    "@barchart/common-js": "^3.17.2"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
