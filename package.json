@@ -1,6 +1,6 @@
 {
   "name": "@barchart/entitlements-client-js",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "JavaScript SDK for Barchart's Entitlement Service",
   "author": {
     "name": "Bryan Ingle",
