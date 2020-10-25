@@ -39,7 +39,7 @@ EntitlementsGateway.forDevelopment(myJwtProvider, myAuthorizationObserver)
 
 #### Authorization
 
-Each time a restricted operation is attempted, invoke the ```EntitlementsGateway.authorize``` function. This asynchronous invocation will return a ```Boolean``` value indicating if the operation should be permitted.
+Each time a restricted operation is attempted, invoke the ```EntitlementsGateway.authorize``` function. This will asynchronously return a ```Boolean``` value, indicating if the referenced operation should be permitted.
 
 ```js
 myEntitlementsGateway.authorize('some.operation')
