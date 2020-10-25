@@ -18,8 +18,8 @@ You can supply an "observer" function which will be notified each time ```Entitl
 
 ```js
 let myAuthorizationObserver = (request, response) => {
-	console.log(JSON.stringify(request, null, 2);
-	console.log(JSON.stringify(response, null, 2);
+	console.log(JSON.stringify(request, null, 2));
+	console.log(JSON.stringify(response, null, 2));
 };
 ```
 
