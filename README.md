@@ -17,7 +17,7 @@ Authentication is handled with [JWT](https://en.wikipedia.org/wiki/JSON_Web_Toke
 You can supply an "observer" function which will be notified each time ```EntitlementsGateway.authorize``` is called. This could be used to trigger common UI components. Here is an example:
 
 ```js
-let myAuthorizationObserver = (request, response) => {
+const myAuthorizationObserver = (request, response) => {
 	console.log(JSON.stringify(request, null, 2));
 	console.log(JSON.stringify(response, null, 2));
 };
