@@ -12,10 +12,6 @@ This **JavaScript SDK** connects your application to the _Barchart User Entitlem
 
 Authentication is handled with [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token). Construct a [```JwtProvider```](./lib/security/JwtProvider) instance which generates tokens for the current user.
 
-#### Authorization
-
-Each time a restricted operation is attempted, invoke the ```EntitlementsGateway.authorize``` function. This asynchronous invocation will return a ```Boolean``` value indicating if the operation should be permitted.
-
 #### Extensions
 
 You can supply an "observer" function which will be notified each time ```EntitlementsGateway.authorize``` is called. This could be used to trigger common UI components. Here is an example:
@@ -27,7 +23,7 @@ let myAuthorizationObserver = (request, response) => {
 };
 ```
 
-#### Basic Setup
+#### Setup
 
 Build an instance of the ```EntitlementsGateway``` as follows:
 
@@ -41,7 +37,9 @@ EntitlementsGateway.forDevelopment(myJwtProvider, myAuthorizationObserver)
 	});
 ```
 
-#### Basic Usage
+#### Authorization
+
+Each time a restricted operation is attempted, invoke the ```EntitlementsGateway.authorize``` function. This asynchronous invocation will return a ```Boolean``` value indicating if the operation should be permitted.
 
 ```js
 myEntitlementsGateway.authorize('some.operation')
