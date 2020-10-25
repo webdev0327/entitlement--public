@@ -49,3 +49,11 @@ myEntitlementsGateway.authorize('some.operation')
 		}
 	});
 ```
+
+#### Example
+
+A simple Node.js script can be found in the `examples/node` directory. Review and execute as follows:
+
+```shell
+> node ./examples/node/example.js
+```
