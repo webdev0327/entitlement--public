@@ -7,8 +7,8 @@ phases:
 
   pre_build:
     commands:
-      - npm install
+      - yarn install
 
   build:
     commands:
-      - ./node_modules/.bin/gulp lint
+      - yarn lint

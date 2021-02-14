@@ -1,74 +1,24 @@
 {
-  "name": "@barchart/entitlements-client-js",
-  "version": "1.2.1",
-  "description": "JavaScript SDK for Barchart's Entitlement Service",
+  "name": "@barchart/entitlements-public",
+  "description": "Public packages for the Barchart Entitlements Service",
   "author": {
     "name": "Bryan Ingle",
     "email": "bryan.ingle@barchart.com",
     "url": "http://www.barchart.com"
   },
-  "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "dev": "webpack-dev-server --hot --open",
-    "lint": "eslint --fix --config=.eslintrc './**/*.js'"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/barchart/entitlements-client-js.git"
-  },
-  "keywords": [
-    "Barchart",
-    "JavaScript",
-    "SDK"
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
-  "dependencies": {
-    "@barchart/common-js": "^3.17.2"
+  "scripts": {
+    "clean": "lerna clean --yes && rm -rf node_modules",
+    "lint": "lerna run lint --stream",
+    "test": "lerna run test --stream",
+    "preversion": "git diff --exit-code",
+    "release": "lerna version -m 'Release. Bump version number %v' --tag-version-prefix='' --force-publish --no-granular-pathspec"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.1",
-    "aws-sdk": "^2.732.0",
-    "babel-loader": "^8.1.0",
-    "babelify": "^10.0.0",
-    "browserify": "^16.5.2",
-    "css-loader": "^3.6.0",
-    "eslint": "^6.5.1",
-    "git-get-status": "^1.0.5",
-    "glob": "^6.0.1",
-    "gulp": "^4.0.2",
-    "gulp-awspublish": "^4.1.2",
-    "gulp-git": "^2.9.0",
-    "gulp-jasmine": "^2.2.1",
-    "gulp-jshint": "~2.1.0",
-    "gulp-prompt": "^1.2.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-replace": "^0.5.4",
-    "gulp-run-command": "0.0.10",
     "jshint": "^2.12.0",
-    "merge-stream": "^2.0.0",
-    "style-loader": "^1.2.1",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0",
-    "vue": "^2.6.11",
-    "vue-json-viewer": "^2.2.14",
-    "vue-loader": "^15.9.3",
-    "vue-template-compiler": "^2.6.11",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
-  },
-  "browserify": {
-    "transform": [
-      [
-        "babelify"
-      ]
-    ]
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/barchart/entitlements-client-js/issues"
-  },
-  "homepage": "https://github.com/barchart/entitlements-client-js#readme",
-  "directories": {
-    "test": "test"
+    "lerna": "^3.22.1"
   }
 }
