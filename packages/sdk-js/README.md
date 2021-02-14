@@ -2,7 +2,7 @@
 
 ### Overview
 
-This **JavaScript SDK** connects your application to the _Barchart User Entitlement Service_.
+This **JavaScript SDK** connects your application to the Barchart Entitlement Service.
 
 ### Integration
 
