@@ -1,6 +1,9 @@
 {
   "name": "@barchart/entitlements-public",
   "description": "Public packages for the Barchart Entitlements Service",
+  "workspaces": [
+    "packages/*"
+  ],
   "author": {
     "name": "Bryan Ingle",
     "email": "bryan.ingle@barchart.com",
