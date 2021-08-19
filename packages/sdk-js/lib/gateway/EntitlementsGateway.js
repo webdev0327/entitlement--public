@@ -123,6 +123,7 @@ module.exports = (() => {
 				.withPathBuilder((pb) =>
 					pb.withLiteralParameter('version', 'v1')
 						.withLiteralParameter('service', 'service')
+						.withLiteralParameter('version', 'version')
 				)
 				.withResponseInterceptor(ResponseInterceptor.DATA)
 				.withErrorInterceptor(ErrorInterceptor.GENERAL)

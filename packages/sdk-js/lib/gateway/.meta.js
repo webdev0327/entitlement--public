@@ -10,8 +10,11 @@
  * @typedef EntitlementServiceInfo
  * @type Object
  * @memberOf Schema
- * @property {String} semver - The remote service's software version.
- * @property {String} environment - The remote service's environment name (e.g. production, test, staging, etc).
+ * @property {Object} service
+ * @property {String} service.name - The remote service's name.
+ * @property {String} service.environment - The remote service's environment name (e.g. production, test, staging, etc).
+ * @property {String} service.version - The remote service's software version.
+ * @property {String} service.description - The remote service's description.
  */
 
 /**
